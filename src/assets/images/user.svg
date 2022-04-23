@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Base" cx="36" cy="36" r="36" transform="translate(0 0.198)" fill="#0e4dfb" stroke="#fff" stroke-miterlimit="10" stroke-width="6" style="mix-blend-mode: lighten;isolation: isolate"/>
+    </clipPath>
+  </defs>
+  <g id="Group_997" data-name="Group 997" transform="translate(-4596 -5731)">
+    <circle id="Base-2" data-name="Base" cx="36" cy="36" r="36" transform="translate(4596 5731)" fill="#0e4dfb"/>
+    <g id="Thumb" transform="translate(4596 5730.802)" clip-path="url(#clip-path)">
+      <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(11 55.198)" fill="none" stroke="#fff" stroke-width="1.5">
+        <circle cx="25" cy="25" r="25" stroke="none"/>
+        <circle cx="25" cy="25" r="24.25" fill="none"/>
+      </g>
+      <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(20 19.198)" fill="none" stroke="#fff" stroke-width="1.5">
+        <ellipse cx="16" cy="15.5" rx="16" ry="15.5" stroke="none"/>
+        <ellipse cx="16" cy="15.5" rx="15.25" ry="14.75" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
