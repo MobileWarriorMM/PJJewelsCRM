@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Dimensions, StyleSheet, Image, TextInput, StatusBar, Pressable, ScrollView } from 'react-native';
-// import Users from './assets/images/user.svg';
+import Users from './assets/images/user.svg';
 import Lock from 'react-native-vector-icons/EvilIcons';
 import CheckBox from '@react-native-community/checkbox';
 
@@ -26,20 +26,30 @@ const Register = ({ navigation }) => {
           <Image source={require('./assets/images/Layer.png')} style={{ height: height * 0.18, width: width - 195 }} />
 
           <View style={register.subcontainer}>
-
-            <View>
-              <View style={register.prof}><View style={{ justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}>
-                {/* <Users height={77} width={77} /> */}
+            <View style={register.prof}>
+              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                <Users height={78} width={78} />
               </View>
+            </View>
+            <View style={{width: width, justifyContent: 'center', alignItems: 'center',top:-30 }}>
+                  <Text style={{ color: 'black', fontSize: 22,fontFamily:'Poppins-Regular' }}>User Registration</Text>
+                  <Text style={register.text}>Your Basic Information</Text>
+                </View>
+
+
+
+            {/* <View>
+              <View style={register.prof}>
+                <Users height={77} width={77} />
                 <View style={{ top: 65, width: width, justifyContent: 'center', alignItems: 'center' }}>
                   <Text style={{ color: 'black', fontSize: 22,fontFamily:'Poppins-Regular' }}>User Registration</Text>
                   <Text style={register.text}>Your Basic Information</Text>
                 </View>
 
               </View>
-            </View>
+            </View> */}
 
-            <ScrollView horizontal={false}>
+            <ScrollView horizontal={false} style={{top:-20}}>
 
               <View style={{ height: height * 1.3 }}>
                 <View style={{ top: width * 0.04 }}>
@@ -64,7 +74,7 @@ const Register = ({ navigation }) => {
                     <Text style={register.text}>Employee Name</Text>
                   </View>
                   <View style={register.inputContainer}>
-                  <View style={register.inputtext} />
+                    <View style={register.inputtext} />
                     <TextInput
                       placeholder="Enter Employee name"
                       onChange={(text) => setName(text)}
@@ -82,7 +92,7 @@ const Register = ({ navigation }) => {
                     <Text style={register.text}>Mobile</Text>
                   </View>
                   <View style={register.inputContainer}>
-                  <View style={register.inputtext} />
+                    <View style={register.inputtext} />
                     <TextInput
                       placeholder="Enter your mobile no"
                       onChange={(phno) => setPhone(phno)}
@@ -100,7 +110,7 @@ const Register = ({ navigation }) => {
                     <Text style={register.text}>Email address</Text>
                   </View>
                   <View style={register.inputContainer}>
-                  <View style={register.inputtext} />
+                    <View style={register.inputtext} />
                     <TextInput
                       placeholder="Enter your email id"
                       onChange={(mail) => setEmail(mail)}
@@ -118,7 +128,7 @@ const Register = ({ navigation }) => {
                     <Text style={register.text}>Organization id</Text>
                   </View>
                   <View style={register.inputContainer}>
-                  <View style={register.inputtext} />
+                    <View style={register.inputtext} />
                     <TextInput
                       placeholder="Enter your Organization  id"
                       onChange={(mail) => setEmail(mail)}
@@ -136,7 +146,7 @@ const Register = ({ navigation }) => {
                     <Text style={register.text}>Manager</Text>
                   </View>
                   <View style={register.inputContainer}>
-                  <View style={register.inputtext} />
+                    <View style={register.inputtext} />
                     <TextInput
                       placeholder="Enter your Manager name"
                       onChange={(mail) => setEmail(mail)}
@@ -154,7 +164,7 @@ const Register = ({ navigation }) => {
                     <Text style={register.text}>Location</Text>
                   </View>
                   <View style={register.inputContainer}>
-                  <View style={register.inputtext} />
+                    <View style={register.inputtext} />
                     <TextInput
                       placeholder="Enter your location"
                       onChange={(mail) => setEmail(mail)}
@@ -238,7 +248,7 @@ const Register = ({ navigation }) => {
                     tintColors={{ true: '#fcb103' }}
                   />
 
-                  <Text style={{ color: 'black', marginTop: 7, fontFamily:'Poppins-Regular' }}>Active</Text>
+                  <Text style={{ color: 'black', marginTop: 7, fontFamily: 'Poppins-Regular' }}>Active</Text>
                 </View>
 
 
@@ -250,11 +260,11 @@ const Register = ({ navigation }) => {
                     tintColors={{ true: '#fcb103' }}
                   />
 
-                  <Text  style={register.checktext}>Mobile Login</Text>
+                  <Text style={register.checktext}>Mobile Login</Text>
                 </View>
 
                 <Pressable style={register.button}>
-                  <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 17, fontFamily:'Poppins-Regular' }}>SEND OTP</Text>
+                  <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 17, fontFamily: 'Poppins-Regular' }}>SEND OTP</Text>
                 </Pressable>
               </View>
             </ScrollView>
@@ -334,34 +344,34 @@ const register = StyleSheet.create({
     shadowColor: 'black',
     elevation: 6,
   },
-  inputtext:{
-    borderRadius: 50, 
+  inputtext: {
+    borderRadius: 50,
     backgroundColor: '#fcb103',
-     width: 17, 
-     height: 17,
-      marginTop: 10, 
-      marginRight: 5,
+    width: 17,
+    height: 17,
+    marginTop: 10,
+    marginRight: 5,
   },
-  placeholder:{ 
-    height: height * 0.06, 
-    width: width, 
+  placeholder: {
+    height: height * 0.06,
+    width: width,
     color: 'grey',
-    fontFamily:'Poppins-Regular'
-   },
-   checkbox:{
-      flexDirection: 'row',
-       top: width * 0.47,
-        marginHorizontal: 20 
-      },
-      checktext:{ 
-        color: 'black',
-         marginTop: 7, 
-         fontFamily:'Poppins-Regular' 
-        },
-        text:{ 
-          color: 'grey',
-           fontFamily:'Poppins-Regular'
-           },
+    fontFamily: 'Poppins-Regular'
+  },
+  checkbox: {
+    flexDirection: 'row',
+    top: width * 0.47,
+    marginHorizontal: 20
+  },
+  checktext: {
+    color: 'black',
+    marginTop: 7,
+    fontFamily: 'Poppins-Regular'
+  },
+  text: {
+    color: 'grey',
+    fontFamily: 'Poppins-Regular'
+  },
 
 })
 

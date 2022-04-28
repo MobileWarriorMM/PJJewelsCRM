@@ -23,22 +23,22 @@ const AddCustomer = ({ navigation }) => {
     <ScrollView>
       <View style={back.mainContainer}>
         <StatusBar translucent backgroundColor='transparent' />
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', top: width * 0.11, marginHorizontal: 20 }}>
-          <View style={{flexDirection:'row'}}>
-          <Pressable onPress={() => navigation.goBack()}><Arrow name='arrow-left' size={25} color={'white'} style={{ marginRight: 7 }} /></Pressable>
-
-          <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Poppins-Bold',marginLeft:10}}>ADD CUSTOMER</Text>
-          </View>
-
-          <View style={{ flexDirection: 'row' }}>
-            <View style={[back.notify, { marginHorizontal: 5 }]}>
+        <Image source={require('./assets/images/Layer.png')} style={{ height: height * 0.18, width: width - 195 }} />
+        <View style={{height:height,width:width,backgroundColor:'#193ea5',position:'absolute',opacity:0.3}}/>
+      <View  style={{ flexDirection: 'row', marginHorizontal: 20, top: -100,justifyContent:'space-between' }}>
+        <View style={{flexDirection:'row'}}>
+        <Pressable onPress={() => navigation.goBack()}><Arrow name='arrow-left' size={25} color={'white'} style={{ marginRight: 7 }} /></Pressable>
+        <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Poppins-Bold' }}>ADD CUSTOMER</Text>
+        </View>
+        <View style={{flexDirection:'row'}}>
+        <View style={[back.notify, { marginHorizontal: 5 }]}>
               <Phone name='bell' size={15} color={'black'} />
             </View>
-            <View style={back.notify}>
+            <Pressable style={back.notify} onPress={()=>navigation.navigate('profile')}>
               <Phone name='user' size={15} color={'black'} />
-            </View>
-          </View>
+            </Pressable>
         </View>
+      </View>
 
         <View style={back.subcontainer}>
 

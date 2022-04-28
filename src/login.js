@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, Dimensions, StyleSheet, Image, TextInput, StatusBar, Pressable } from 'react-native';
-import Users from './assets/images/user.svg';
 import Lock from 'react-native-vector-icons/EvilIcons';
 import Person from 'react-native-vector-icons/Feather';
 import CheckBox from '@react-native-community/checkbox';
+import Users from './assets/images/user.svg';
 
 const Login = ({ navigation }) => {
 
@@ -20,7 +20,7 @@ const Login = ({ navigation }) => {
       <View style={login.subcontainer}>
         <View style={login.prof}>
           <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-            {/* <Users height={77} width={77} /> */}
+            <Users height={77} width={77}/>
           </View>
         </View>
 
