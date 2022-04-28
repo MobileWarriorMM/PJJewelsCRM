@@ -173,7 +173,7 @@ const well = StyleSheet.create({
   box: {
     width: width * 0.9,
     height: height * 0.13,
-    borderRadius: 35
+    borderRadius: 25
   },
   tag: {
     width: width * 0.6,

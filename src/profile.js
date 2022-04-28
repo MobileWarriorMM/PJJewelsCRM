@@ -110,7 +110,6 @@ const Profile = ({ navigation }) => {
                         <Pressable style={login.button} onPress={() => console.log('password value',psword)}>
                             <Text style={{ color: 'white', fontSize: 14, fontFamily: 'Poppins-Bold' }}>CHANGE PASSWORD</Text>
                         </Pressable>
-
                     </View>
                 </View>
     </View>
