@@ -4,7 +4,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Coin from 'react-native-vector-icons/Feather';
 import Document from 'react-native-vector-icons/AntDesign';
 import Phone from 'react-native-vector-icons/FontAwesome5';
-
+import Topimg from './assets/images/top-img.svg';
+import Status from './assets/images/status.svg';
+import Arrow from './assets/images/arrow.svg';
+import Avatar from './assets/images/avatar.svg';
+import Doc from './assets/images/doc.svg';
 
 const WelcomePage = ({ navigation }) => {
 
@@ -46,30 +50,35 @@ const WelcomePage = ({ navigation }) => {
         </View>
       </View>
       <View style={well.subcontainer}>
-      <View>
+      {/* <View>
           <View style={{ justifyContent: 'center', alignItems: 'center', marginVertical: 20 }}>
             <Image source={{ uri: 'https://media.kasperskydaily.com/wp-content/uploads/sites/92/2015/12/06023401/passwords-10x10-featured.jpg' }}
               style={{ width: 90, height: 90, borderRadius: 100 }} />
             <Text style={{ color: '#111563', fontFamily: 'Poppins-Bold', marginTop: 5, fontSize: 23 }}>PJ JEWELERY</Text>
           </View>
         </View>
+ */}
 
+ <Topimg style={{alignSelf:'center'}}/>
 
         <View style={{ justifyContent: 'center', alignItems: 'center',}}>
 
-<View style={[well.box, { backgroundColor: 'lightblue', borderColor: 'darkblue', borderWidth: 1 }]}>
+<View style={[well.box, { backgroundColor: '#fac3d5', borderColor: '#c71650', borderWidth: 1 }]}>
     <Pressable style={well.view} onPress={()=>Navigatecus()}>
       <View>
-        <Text style={{ fontSize: 22, fontFamily: 'Poppins-Bold' }}>Customer</Text>
-        <Text style={{ fontFamily: 'Poppins-Regular' }}>Lorem ipsum dolor sit amet,</Text>
+        <Text style={{ fontSize: 22, fontFamily: 'Poppins-Bold',color:'#111563' }}>Customer</Text>
+        <Text style={{ fontFamily: 'Poppins-Regular',color:'black' }}>Lorem ipsum dolor sit amet,</Text>
       </View>
-      <Icon name='bookmark' size={50} />
+      <Phone name='user-friends' size={50} color={'#c71650'}/>
+      {/* <Icon name='bookmark' size={50} /> */}
+      {/* <Avatar/> */}
     </Pressable>
   </View>
   <View style={[well.tag, { backgroundColor: 'white' }]}>
     <View style={well.content}>
-      <Text style={{fontFamily:'Poppins-Regular'}}>View Detials</Text>
-      <Coin name='target' size={20} color={'#fce005'} />
+      <Text style={{fontFamily:'Poppins-Regular',color:'grey'}}>View Detials</Text>
+      {/* <Coin name='target' size={20} color={'#fce005'} /> */}
+      <Arrow/>
     </View>
   </View>
 
@@ -78,52 +87,57 @@ const WelcomePage = ({ navigation }) => {
     <View style={[well.box, { backgroundColor: 'lightgreen', borderColor: 'darkgreen', borderWidth: 1 }]}>
       <View style={well.view}>
         <View>
-          <Text style={{ fontSize: 22, fontFamily: 'Poppins-Bold' }}>Enquirey</Text>
-          <Text style={{ fontFamily: 'Poppins-Regular' }}>Lorem ipsum dolor sit amet,</Text>
+          <Text style={{ fontSize: 22, fontFamily: 'Poppins-Bold',color:'#111563' }}>Enquirey</Text>
+          <Text style={{ fontFamily: 'Poppins-Regular',color:'black' }}>Lorem ipsum dolor sit amet,</Text>
         </View>
-        <Icon name='microphone' size={50} />
+        <Icon name='microphone' size={50} color={'darkgreen'}/>
       </View>
     </View>
     <View style={[well.tag, { backgroundColor: 'white' }]}>
       <View style={well.content}>
-      <Text style={{fontFamily:'Poppins-Regular'}}>View Detials</Text>
-        <Coin name='target' size={20} color={'#fce005'} />
+      <Text style={{fontFamily:'Poppins-Regular',color:'grey'}}>View Detials</Text>
+        {/* <Coin name='target' size={20} color={'#fce005'} /> */}
+        <Arrow/>
       </View>
     </View>
   </Pressable>
 
 
-  <View style={[well.box, { backgroundColor: 'lightpink', borderColor: 'darkpink', borderWidth: 1 }]}>
+  <View style={[well.box, { backgroundColor: '#f7c9a3', borderColor: '#f28d3a', borderWidth: 1 }]}>
     <Pressable style={well.view} onPress={()=>NavigationFpDetials()}>
       <View>
-        <Text style={{ fontSize: 22, fontFamily: 'Poppins-Bold' }}>Follow up</Text>
-        <Text style={{ fontFamily: 'Poppins-Regular' }}>Lorem ipsum dolor sit amet,</Text>
+        <Text style={{ fontSize: 22, fontFamily: 'Poppins-Bold',color:'#111563' }}>Follow up</Text>
+        <Text style={{ fontFamily: 'Poppins-Regular',color:'black' }}>Lorem ipsum dolor sit amet,</Text>
       </View>
-      <Phone name='user-friends' size={50} />
+      {/* <Phone name='user-friends' size={50} /> */}
+      <Avatar/>
     </Pressable>
   </View>
   <View style={[well.tag, { backgroundColor: 'white' }]}>
     <View style={well.content}>
-    <Text style={{fontFamily:'Poppins-Regular'}}>View Detials</Text>
-      <Coin name='target' size={20} color={'#fce005'} />
+    <Text style={{fontFamily:'Poppins-Regular',color:'grey'}}>View Detials</Text>
+      {/* <Coin name='target' size={20} color={'#fce005'} /> */}
+      <Arrow/>
     </View>
   </View>
 
 
 
-  <View style={[well.box, { backgroundColor: 'lightgrey', borderColor: 'darkgrey', borderWidth: 1 }]}>
+  <View style={[well.box, { backgroundColor: '#fafca2', borderColor: '#a8ad03', borderWidth: 1 }]}>
     <Pressable style={well.view} onPress={()=>navigation.navigate('invoicelist')}>
       <View>
-        <Text style={{ fontSize: 22, fontFamily: 'Poppins-Bold' }}>Invoice Approvel</Text>
-        <Text style={{ fontFamily: 'Poppins-Regular' }}>Lorem ipsum dolor sit amet,</Text>
+        <Text style={{ fontSize: 22, fontFamily: 'Poppins-Bold',color:'#111563' }}>Invoice Approvel</Text>
+        <Text style={{ fontFamily: 'Poppins-Regular',color:'black' }}>Lorem ipsum dolor sit amet,</Text>
       </View>
-      <Document name='filetext1' size={50} />
+      {/* <Document name='filetext1' size={50} /> */}
+      <Doc/>
     </Pressable>
   </View>
   <View style={[well.tag, { backgroundColor: 'white' }]}>
     <View style={well.content}>
-    <Text style={{fontFamily:'Poppins-Regular'}}>View Detials</Text>
-      <Coin name='target' size={20} color={'#fce005'} />
+    <Text style={{fontFamily:'Poppins-Regular',color:'grey'}}>View Detials</Text>
+      {/* <Coin name='target' size={20} color={'#fce005'} /> */}
+      <Arrow/>
     </View>
   </View>
 
@@ -132,16 +146,19 @@ const WelcomePage = ({ navigation }) => {
   <View style={[well.box, { backgroundColor: 'lightblue', borderColor: 'darkblue', borderWidth: 1 }]}>
     <Pressable style={well.view} onPress={()=>navigation.navigate('report')}>
       <View>
-        <Text style={{ fontSize: 22, fontFamily: 'Poppins-Bold' }}>Report</Text>
-        <Text style={{ fontFamily: 'Poppins-Regular' }}>Lorem ipsum dolor sit amet,</Text>
+        <Text style={{ fontSize: 22, fontFamily: 'Poppins-Bold',color:'#111563' }}>Report</Text>
+        <Text style={{ fontFamily: 'Poppins-Regular',color:'black' }}>Lorem ipsum dolor sit amet,</Text>
       </View>
-      <Icon name='bookmark' size={50} />
+      {/* <Icon name='bookmark' size={50} /> */}
+      <Status/>
     </Pressable>
   </View>
   <View style={[well.tag, { backgroundColor: 'white' }]}>
     <View style={well.content}>
-      <Text style={{fontFamily:'Poppins-Regular'}}>View Detials</Text>
-      <Coin name='target' size={20} color={'#fce005'} />
+      <Text style={{fontFamily:'Poppins-Regular',color:'grey'}}>View Detials</Text>
+      {/* <Coin name='target' size={20} color={'#fce005'} /> */}
+      <Arrow/>
+
     </View>
   </View>
 

@@ -4,7 +4,7 @@ import Calender from 'react-native-vector-icons/AntDesign';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import Phone from 'react-native-vector-icons/FontAwesome5';
 import Arrow from 'react-native-vector-icons/Feather';
-
+import Bottomimg from './assets/images/bottom-img.svg';
 const InvoiceList = ({ navigation }) => {
 
     const { width, height } = Dimensions.get('window');
@@ -70,7 +70,7 @@ const InvoiceList = ({ navigation }) => {
 
                             <View style={{ flexDirection: 'row' }}>
                                 <View style={{ backgroundColor: 'lightblue', width: 35, height: 50, justifyContent: 'center', alignItems: 'center' }}>
-                                    <Phone name='user' size={23} />
+                                    <Phone name='user' size={23} color={'#111653'}/>
 
                                 </View>
                                 <View style={{ marginLeft: 20 }} key={item.id}>
@@ -177,11 +177,15 @@ const InvoiceList = ({ navigation }) => {
                 </View>
 
                 <ScrollView horizontal={false} style={{ height: height }}>{List()}</ScrollView>
-
-                <View style={{width:width,height:35,justifyContent:'center',alignItems:'center',marginBottom:50,paddingBottom:10}}>
+                {/* <Bottomimg style={{alignSelf:'center'}}/> */}
+                <View style={{width:width,height:35,justifyContent:'center',alignItems:'center',marginBottom:50,}}>
+                <Bottomimg style={{alignSelf:'center',top:-70}}/>
                     <Text style={{color:'grey',fontFamily:'Poppins-Regular'}}>Powered  by
-                     <Text style={{fontFamily:'Poppins-Bold',color:'grey'}}> Avaniko</Text></Text></View>
+                     <Text style={{fontFamily:'Poppins-Bold',color:'grey'}}> Avaniko</Text></Text>
+
+                     </View>
             </View>
+
         </View>
     );
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Dimensions, StyleSheet, Image,StatusBar, Pressable,Modal,TextInput } from 'react-native';
 import Arrow from 'react-native-vector-icons/Feather';
 import Phone from 'react-native-vector-icons/FontAwesome5';
+import Bottomimg from './assets/images/bottom-img.svg';
 
 const InvoiceDetail = ({ navigation }) => {
 
@@ -14,14 +15,13 @@ const InvoiceDetail = ({ navigation }) => {
       <StatusBar translucent backgroundColor='transparent' />
       <Modal
       style={{height:height*1.6}}
-        animationType="slide"
+        animationType="slidetoLeft"
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => {
-        //  Alert.alert("Modal has been closed.");
           setModalVisible(!modalVisible);
         }}
-       // onBackdropPress={()=>{setModalVisible(false)}}
+       onBackdropPress={()=>{setModalVisible(!modalVisible)}}
        onAccessibilityTap={()=>setModalVisible(false)}
       statusBarTranslucent={true}
         
@@ -77,43 +77,43 @@ const InvoiceDetail = ({ navigation }) => {
         
       <View style={{marginHorizontal:20,marginVertical:20}}>
         <View>
-          <Text style={{fontFamily:'Poppins-Regular'}}>CUSTOMER NAME</Text>
+          <Text style={{fontFamily:'Poppins-Regular',color:'grey' }}>CUSTOMER NAME</Text>
           <Text style={{color:'#111563',fontFamily:'Poppins-Bold'}}>Muthukumar</Text>
           <View style={{height:0.5,width:width-40,backgroundColor:'lightgrey',marginVertical:10}}/>
         </View>
 
         <View>
-          <Text style={{fontFamily:'Poppins-Regular'}}>CONTACT NUMBER</Text>
+          <Text style={{fontFamily:'Poppins-Regular',color:'grey' }}>CONTACT NUMBER</Text>
           <Text style={{color:'#111563',fontFamily:'Poppins-Bold'}}>9987654321</Text>
           <View style={{height:0.5,width:width-40,backgroundColor:'lightgrey',marginVertical:10}}/>
         </View>
 
         <View>
-          <Text style={{fontFamily:'Poppins-Regular'}}>ITEM</Text>
+          <Text style={{fontFamily:'Poppins-Regular',color:'grey' }}>ITEM</Text>
           <Text style={{color:'#111563',fontFamily:'Poppins-Bold'}}>Chain-rope chain</Text>
           <View style={{height:0.5,width:width-40,backgroundColor:'lightgrey',marginVertical:10}}/>
         </View>
 
         <View>
-          <Text style={{fontFamily:'Poppins-Regular'}}>DOC DATE</Text>
+          <Text style={{fontFamily:'Poppins-Regular',color:'grey' }}>DOC DATE</Text>
           <Text style={{color:'#111563',fontFamily:'Poppins-Bold'}}>25-04-2022</Text>
           <View style={{height:0.5,width:width-40,backgroundColor:'lightgrey',marginVertical:10}}/>
         </View>
 
         <View>
-          <Text style={{fontFamily:'Poppins-Regular'}}>DOC NO</Text>
+          <Text style={{fontFamily:'Poppins-Regular',color:'grey' }}>DOC NO</Text>
           <Text style={{color:'#111563',fontFamily:'Poppins-Bold'}}>ITEM002</Text>
           <View style={{height:0.5,width:width-40,backgroundColor:'lightgrey',marginVertical:10}}/>
         </View>
 
         <View>
-          <Text style={{fontFamily:'Poppins-Regular'}}>GROSS WT</Text>
+          <Text style={{fontFamily:'Poppins-Regular',color:'grey' }}>GROSS WT</Text>
           <Text style={{color:'#111563',fontFamily:'Poppins-Bold'}}>12.2gm</Text>
           <View style={{height:0.5,width:width-40,backgroundColor:'lightgrey',marginVertical:10}}/>
         </View>
 
         <View>
-          <Text style={{fontFamily:'Poppins-Regular'}}>NET WT</Text>
+          <Text style={{fontFamily:'Poppins-Regular',color:'grey' }}>NET WT</Text>
           <Text style={{color:'#111563',fontFamily:'Poppins-Bold'}}>12.2gm</Text>
           <View style={{height:0.5,width:width-40,backgroundColor:'lightgrey',marginVertical:10}}/>
         </View>
@@ -128,16 +128,13 @@ const InvoiceDetail = ({ navigation }) => {
         </Pressable>
 
       </View>
-
-
       </View>
 
-      <View style={{width:width,height:35,justifyContent:'center',alignItems:'center',paddingBottom:10,bottom:0,top:height*0.11}}>
+      <View style={{width:width,height:35,justifyContent:'center',alignItems:'center',paddingBottom:10,bottom:0,top:height*0.095}}>
                     <Text style={{color:'grey',fontFamily:'Poppins-Regular'}}>Powered  by
                      <Text style={{fontFamily:'Poppins-Bold',color:'grey'}}> Avaniko</Text></Text></View>
-    
+                     {/* <Bottomimg style={{alignSelf:'center',top:-90}}/> */}
       </View>
-      
 
     </View>
   );

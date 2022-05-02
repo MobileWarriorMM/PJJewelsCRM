@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Dimensions, StyleSheet, Image, TextInput, StatusBar, Pressable, ScrollView } from 'react-native';
+import { View, Text, Dimensions, StyleSheet, Image, TextInput, StatusBar, Pressable, ScrollView,KeyboardAvoidingView } from 'react-native';
 import Users from './assets/images/user.svg';
 import Lock from 'react-native-vector-icons/EvilIcons';
 import CheckBox from '@react-native-community/checkbox';
@@ -19,7 +19,7 @@ const Register = ({ navigation }) => {
 
   return (
     <>
-      <View>
+      <KeyboardAvoidingView>
 
         <View style={register.mainContainer}>
           <StatusBar translucent backgroundColor='transparent' />
@@ -273,7 +273,7 @@ const Register = ({ navigation }) => {
 
         </View>
 
-      </View>
+      </KeyboardAvoidingView>
     </>
   );
 }

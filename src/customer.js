@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, Dimensions, StyleSheet, Image, StatusBar, Pressable, Button, ScrollView, TextInput } from 'react-native';
+import { View, Text, Dimensions, StyleSheet, Image, StatusBar, Pressable, Button, ScrollView, TextInput,TouchableHighlight } from 'react-native';
 import Person from 'react-native-vector-icons/Feather';
 import Phone from 'react-native-vector-icons/FontAwesome5';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import Calender from 'react-native-vector-icons/AntDesign';
 import { Picker } from '@react-native-picker/picker';
+import Bottomimg from './assets/images/bottom-img.svg';
+import LinearGradient from 'react-native-linear-gradient';
 
 const Customer = ({ navigation, route }) => {
   //const[con,setcon]=useState(console.log('djmehdmeiouhloehow',route.params.paramKey2));
@@ -166,7 +168,6 @@ const Customer = ({ navigation, route }) => {
       <View  style={{ flexDirection: 'row', marginHorizontal: 20, top: -100,justifyContent:'space-between' }}>
         <View style={{flexDirection:'row'}}>
         <Pressable onPress={() => navigation.goBack()}><Person name='arrow-left' size={25} color={'white'} style={{ marginRight: 7 }} /></Pressable>
-
       {
         (cus==='customer')?
         <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Poppins-Bold' }}>CUSTOMER</Text>
@@ -229,9 +230,9 @@ const Customer = ({ navigation, route }) => {
         <>
           {
             (cus === 'customer') ?
-              <View style={{ marginHorizontal: 20, justifyContent: 'center' }}>
+              <View style={{ marginHorizontal: 20, justifyContent: 'center'}}>
 
-                <ScrollView horizontal={false} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} style={{height:height*0.75}}>
+                <ScrollView horizontal={false} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
                   <Text style={{ color: '#111563', fontFamily: 'Poppins-Bold', fontSize: 18, marginTop: 10 }}>Customer Detials</Text>
                   <View style={{height:height}}>
                     {
@@ -243,7 +244,7 @@ const Customer = ({ navigation, route }) => {
 
                                 <View style={{ flexDirection: 'row' }}>
                                   <View style={{ backgroundColor: 'lightblue', width: 35, height: 50, justifyContent: 'center', alignItems: 'center' }}>
-                                    <Phone name='user' size={23} />
+                                    <Phone name='user' size={23} color={'#111653'}/>
 
                                   </View>
                                   <View style={{ marginLeft: 20 }} key={item.id}>
@@ -273,9 +274,6 @@ const Customer = ({ navigation, route }) => {
 
                     }
                   </View>
-
-
-
                 </ScrollView>
                 {/* <View style={{width:width,height:35,justifyContent:'center',alignItems:'center',marginBottom:50,backgroundColor:'red'}}>
                     <Text style={{color:'grey',fontFamily:'Poppins-Regular'}}>Powered  by
@@ -298,7 +296,7 @@ const Customer = ({ navigation, route }) => {
 
                                 <View style={{ flexDirection: 'row' }}>
                                   <View style={{ backgroundColor: 'lightblue', width: 35, height: 50, justifyContent: 'center', alignItems: 'center' }}>
-                                    <Phone name='file-signature' size={23} />
+                                    <Phone name='file-signature' size={23} color={'#111653'}/>
 
                                   </View>
                                   <View style={{ marginLeft: 20 }} key={item.id}>
@@ -359,9 +357,9 @@ const Customer = ({ navigation, route }) => {
 
                     <View style={{ backgroundColor: '#f0fbfc', height: height * 0.27, marginTop: 10, borderRadius: 10 }}>
                       <View style={{ top: width * 0.05, marginHorizontal: 10 }}>
-                        <View style={custom.labelContainer}>
+                        <LinearGradient style={custom.labelContainer} colors={['#f0fbfc','white']}>
                           <Text style={{ color: 'grey', fontFamily: 'Poppins-Regular' }}>Select Priority</Text>
-                        </View>
+                        </LinearGradient>
                         <View style={{ height: height * 0.06, color: 'black', borderRadius: 10, borderColor: 'grey', borderWidth: 1, justifyContent: 'center',backgroundColor:'white'  }}>
                           <View style={{ flexDirection: 'row' }}>
                             <View style={custom.inputtext} />
@@ -370,10 +368,10 @@ const Customer = ({ navigation, route }) => {
                               onValueChange={(itemValue, itemIndex) =>
                                 setPriority(itemValue)
                               }
-                              style={{ width: width * 0.8 }}
+                              style={{ width: width * 0.8,color:'black'}}
                             >
                               {prty.map((item, index) => {
-                                return (< Picker.Item label={item} value={index} key={index} />);
+                                return (< Picker.Item label={item} value={index} key={index} color={'black'}/>);
                               })}
                             </Picker>
                           </View>
@@ -383,9 +381,9 @@ const Customer = ({ navigation, route }) => {
 
 
                       <View style={{ top: width * 0.10, marginHorizontal: 10 }}>
-                        <View style={custom.labelContainer}>
+                      <LinearGradient style={custom.labelContainer} colors={['#f0fbfc','white']}>
                           <Text style={{ color: 'grey', fontFamily: 'Poppins-Regular' }}>Select Status</Text>
-                        </View>
+                          </LinearGradient>
                         <View style={{ height: height * 0.06, color: 'black', borderRadius: 10, borderColor: 'grey', borderWidth: 1, justifyContent: 'center',backgroundColor:'white'  }}>
                           <View style={{ flexDirection: 'row' }}>
                             <View style={custom.inputtext} />
@@ -394,7 +392,7 @@ const Customer = ({ navigation, route }) => {
                               onValueChange={(itemValue, itemIndex) =>
                                 setStatus(itemValue)
                               }
-                              style={{ width: width * 0.8 }}
+                              style={{ width: width * 0.8,color:'black' }}
                             >
                               {selectstatus.map((item, index) => {
                                 return (< Picker.Item label={item} value={index} key={index} />);
@@ -407,9 +405,9 @@ const Customer = ({ navigation, route }) => {
 
 
                       <View style={{ top: width * 0.15, marginHorizontal: 10 }}>
-                        <View style={custom.labelContainer}>
+                      <LinearGradient style={custom.labelContainer} colors={['#f0fbfc','white']}>
                           <Text style={custom.text}>Follow up Reason</Text>
-                        </View>
+                          </LinearGradient>
                         <View style={[custom.inputContainer, { borderWidth: 1, borderRadius: 10,backgroundColor:'white' }]}>
                           <View style={custom.inputtext} />
                           <TextInput
@@ -436,7 +434,7 @@ const Customer = ({ navigation, route }) => {
 
                                     <View style={{ flexDirection: 'row' }}>
                                       <View style={{ backgroundColor: 'lightblue', width: 35, height: 50, justifyContent: 'center', alignItems: 'center' }}>
-                                        <Phone name='file-signature' size={23} />
+                                        <Phone name='file-signature' size={23} color={'#111653'}/>
 
                                       </View>
                                       <View style={{ marginLeft: 20 }} key={item.id}>
@@ -467,13 +465,6 @@ const Customer = ({ navigation, route }) => {
                         }
                       </View>
                     </ScrollView>
-
-
-
-
-
-
-
                   </View>
                   : <View />
           }</>
@@ -489,7 +480,7 @@ const Customer = ({ navigation, route }) => {
                 bottom: 20,
                 right: 20,
               }}>
-                <Pressable onPress={() => navigation.navigate('addcus')} style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10 }}>
+                <Pressable onPress={()=>navigation.navigate('addcus')} style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10 }}>
                   <Phone name='plus' style={{ color: 'white' }} size={35} />
                 </Pressable>
               </View>
@@ -505,12 +496,23 @@ const Customer = ({ navigation, route }) => {
                 }}>
                   <Pressable onPress={() => navigation.navigate('addenquiry')} style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10 }}>
                     <Phone name='plus' style={{ color: 'white' }} size={35} />
-
                   </Pressable>
                 </View>
                 :
                 <View />
           }</>
+          
+{/* <View style={{top:-180,alignSelf:'center'}}>
+{
+
+  (enq === 'enquiry')?
+  <Bottomimg style={{alignSelf:'center'}}/>:(cus === 'customer')?
+  <Bottomimg style={{alignSelf:'center',top:-120}}/>:<View/>
+}
+</View> */}
+
+
+
       </View>
     </View>
   );
@@ -520,7 +522,7 @@ const { width, height } = Dimensions.get('window');
 const custom = StyleSheet.create({
   mainContainer: {
     backgroundColor: '#111563',
-    height: height * 1.5
+    height: height
   },
   subcontainer: {
     width: width,
@@ -578,7 +580,8 @@ const custom = StyleSheet.create({
     paddingVertical: 5,
     marginBottom: 5,
     height: 32,
-    fontFamily: 'Poppins-Regular'
+    fontFamily: 'Poppins-Regular',
+    color:'grey'
   },
   labelContainer: {
     backgroundColor: "white",

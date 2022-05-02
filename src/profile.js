@@ -30,12 +30,12 @@ const Profile = ({ navigation }) => {
                     <Text style={{ color: 'grey', fontFamily: 'Poppins-Regular' }}>saravanakumar@gmail.com</Text>
                 </View>
 
-                <View style={{ backgroundColor: '#d5f1f5', marginHorizontal: 10, borderRadius: 10, height: height * 0.5 }}>
+                <View style={{ backgroundColor: '#d5f1f5', marginHorizontal: 10, borderRadius: 10, height: height * 0.53 }}>
 
 
                     <View style={{ marginHorizontal: 15, marginVertical: 10 }}>
                         <Text style={{ fontFamily: 'Poppins-Bold',color:'black'}}>Reset/Change Password</Text>
-                        <Text style={{ fontFamily: 'Poppins-Regular', width: width * 0.85, fontSize: 13 }}>Your New Password Must Be Different From Previously Used Password</Text>
+                        <Text style={{ fontFamily: 'Poppins-Regular', width: width * 0.85, fontSize: 13,color:'grey'}}>Your New Password Must Be Different From Previously Used Password</Text>
                     </View>
 
                     <View style={{ marginTop: 20 }}>

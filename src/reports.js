@@ -3,6 +3,7 @@ import { View, Text, Dimensions, StyleSheet, Image, TextInput, StatusBar, Pressa
 import Phone from 'react-native-vector-icons/FontAwesome5';
 import Arrow from 'react-native-vector-icons/Feather';
 import { Picker } from '@react-native-picker/picker';
+import Bottomimg from './assets/images/bottom-img.svg';
 
 const Report = ({ navigation }) => {
     const[search,setSearch]=useState();
@@ -198,7 +199,7 @@ const Report = ({ navigation }) => {
                     <Text style={{color:'grey',fontFamily:'Poppins-Regular'}}>Powered  by
                      <Text style={{fontFamily:'Poppins-Bold',color:'grey'}}> Avaniko</Text></Text></View>
     
-
+                     <Bottomimg style={{alignSelf:'center',top:130}}/>
       </View>
     </View>
   );

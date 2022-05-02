@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Dimensions, StyleSheet, Image, TextInput, StatusBar, Pressable } from 'react-native';
 import Phone from 'react-native-vector-icons/FontAwesome5';
 import Arrow from 'react-native-vector-icons/Feather';
+import Bottomimg from './assets/images/bottom-img.svg';
 
 const ReportList = ({ navigation }) => {
 
@@ -102,6 +103,7 @@ const ReportList = ({ navigation }) => {
                     <Text style={{color:'grey',fontFamily:'Poppins-Regular'}}>Powered  by
                      <Text style={{fontFamily:'Poppins-Bold',color:'grey'}}> Avaniko</Text></Text></View>
     
+                     <Bottomimg style={{alignSelf:'center',top:40}}/>
 
       </View>
     </View>

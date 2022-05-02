@@ -3,6 +3,9 @@ import { View, Text, Dimensions, StyleSheet, Image, StatusBar, TextInput, Scroll
 import Phone from 'react-native-vector-icons/FontAwesome5';
 import Arrow from 'react-native-vector-icons/Feather';
 import { Picker } from '@react-native-picker/picker';
+import Bottomimg from './assets/images/bottom-img.svg';
+import LinearGradient from 'react-native-linear-gradient';
+
 
 const AddEnquiry = ({ navigation }) => {
 
@@ -44,11 +47,10 @@ const AddEnquiry = ({ navigation }) => {
 
         <View style={back.subcontainer}>
           <View style={{ backgroundColor: '#d7f9fc', borderTopLeftRadius: 30, borderTopRightRadius: 30, height: 80 }}>
-
             <View style={{ top: width * 0.05, marginHorizontal: 20 }}>
-              <View style={back.labelContainer}>
+            <LinearGradient style={back.labelContainer} colors={['#d7f9fc','white']}>
                 <Text style={{ color: 'grey', fontFamily: 'Poppins-Regular' }}>Select Priority</Text>
-              </View>
+              </LinearGradient>
               <View style={{ height: height * 0.07, color: 'black', borderRadius: 10, borderColor: 'lightgrey', borderWidth: 1, justifyContent: 'center', backgroundColor: 'white' }}>
                 <View style={{ flexDirection: 'row' }}>
                   <View style={[back.inputtext, { marginLeft: 10, alignSelf: 'center', marginTop: 0, marginRight: 0 }]} />
@@ -247,15 +249,16 @@ const AddEnquiry = ({ navigation }) => {
                   <Text style={{ color: 'black', fontWeight: 'bold', fontSize: 17, fontFamily:'Poppins-Regular' }}>SEND OTP</Text>
                 </Pressable> */}
             <View style={{ justifyContent: 'center', alignItems: 'center', top: width * 0.40 }}>
+              
               <Pressable style={back.btn}>
                 <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 17, fontFamily: 'Poppins-Regular' }}>SAVE</Text>
               </Pressable>
+              <Bottomimg/>
 
             </View>
           </View>
         </View>
       </View>
-
     </ScrollView>
 
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Dimensions, StyleSheet, Image, TextInput, StatusBar, Pressable, ScrollView, Modal } from 'react-native';
+import { View, Text, Dimensions, StyleSheet, Image, Linking, StatusBar, Pressable, ScrollView, Modal } from 'react-native';
 import Users from './assets/images/user.svg';
 import Arrow from 'react-native-vector-icons/Feather';
 import Phone from 'react-native-vector-icons/FontAwesome5';
@@ -146,10 +146,7 @@ const Fpcalls = ({ navigation }) => {
                             </View>
                         </View>
                         <View style={{ backgroundColor: 'lightgrey', height: 1,marginVertical: 3 }} />
-
                        </View>
-
-
                         <View style={{ alignItems: 'center'}}>
                             <Pressable style={fpcall.button} onPress={() =>console.log('selected data.....',data)}>
                                 <Text style={{ color: 'white', fontSize: 17, fontFamily: 'Poppins-Bold' }}>UPDATE</Text>
@@ -164,13 +161,13 @@ const Fpcalls = ({ navigation }) => {
 
                 <View style={{ marginHorizontal: 20, marginVertical: 20 }}>
                     <View>
-                        <Text style={{ fontFamily: 'Poppins-Regular' }}>CUSTOMER ID</Text>
+                        <Text style={{ fontFamily: 'Poppins-Regular',color:'grey' }}>CUSTOMER ID</Text>
                         <Text style={{ color: '#111563', fontFamily: 'Poppins-Bold' }}>CUS1001</Text>
                         <View style={{ height: 0.5, width: width - 40, backgroundColor: 'lightgrey', marginVertical: 5 }} />
                     </View>
 
                     <View>
-                        <Text style={{ fontFamily: 'Poppins-Regular' }}>ITEM NO</Text>
+                        <Text style={{ fontFamily: 'Poppins-Regular',color:'grey'  }}>ITEM NO</Text>
                         <Text style={{ color: '#111563', fontFamily: 'Poppins-Bold' }}>ITEM002</Text>
                         <View style={{ height: 0.5, width: width - 40, backgroundColor: 'lightgrey', marginVertical: 5 }} />
                     </View>
@@ -178,41 +175,42 @@ const Fpcalls = ({ navigation }) => {
                     <View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                             <View>
-                                <Text style={{ fontFamily: 'Poppins-Regular' }}>CONTACT NUMBER</Text>
+                                <Text style={{ fontFamily: 'Poppins-Regular',color:'grey'  }}>CONTACT NUMBER</Text>
                                 <Text style={{ color: '#111563', fontFamily: 'Poppins-Bold' }}>9987654321</Text>
                             </View>
-                            <Pressable style={{ justifyContent: 'center', marginRight: 10 }}><Arrow name='phone-call' size={22} color={'#fcb103'} /></Pressable>
+                            <Pressable style={{ justifyContent: 'center', marginRight: 10 }}
+                             onPress={()=>Linking.openURL(`tel:6385414805`)}><Arrow name='phone-call' size={22} color={'#fcb103'} /></Pressable>
                         </View>
                         <View style={{ height: 0.5, width: width - 40, backgroundColor: 'lightgrey', marginVertical: 5 }} />
 
                     </View>
 
                     <View>
-                        <Text style={{ fontFamily: 'Poppins-Regular' }}>WEIGHT</Text>
+                        <Text style={{ fontFamily: 'Poppins-Regular',color:'grey'  }}>WEIGHT</Text>
                         <Text style={{ color: '#111563', fontFamily: 'Poppins-Bold' }}>12.2gm</Text>
                         <View style={{ height: 0.5, width: width - 40, backgroundColor: 'lightgrey', marginVertical: 5 }} />
                     </View>
 
                     <View>
-                        <Text style={{ fontFamily: 'Poppins-Regular' }}>SALES EMPLOYEE</Text>
+                        <Text style={{ fontFamily: 'Poppins-Regular',color:'grey'  }}>SALES EMPLOYEE</Text>
                         <Text style={{ color: '#111563', fontFamily: 'Poppins-Bold' }}>Sathishkumar</Text>
                         <View style={{ height: 0.5, width: width - 40, backgroundColor: 'lightgrey', marginVertical: 5 }} />
                     </View>
 
                     <View>
-                        <Text style={{ fontFamily: 'Poppins-Regular' }}>STATUS</Text>
+                        <Text style={{ fontFamily: 'Poppins-Regular',color:'grey'  }}>STATUS</Text>
                         <Text style={{ color: '#111563', fontFamily: 'Poppins-Bold' }}>Open</Text>
                         <View style={{ height: 0.5, width: width - 40, backgroundColor: 'lightgrey', marginVertical: 5 }} />
                     </View>
 
                     <View>
-                        <Text style={{ fontFamily: 'Poppins-Regular' }}>ESTIMATED PRICE</Text>
+                        <Text style={{ fontFamily: 'Poppins-Regular',color:'grey'  }}>ESTIMATED PRICE</Text>
                         <Text style={{ color: '#111563', fontFamily: 'Poppins-Bold' }}>35.800</Text>
                         <View style={{ height: 0.5, width: width - 40, backgroundColor: 'lightgrey', marginVertical: 5 }} />
                     </View>
 
                     <View>
-                        <Text style={{ fontFamily: 'Poppins-Regular' }}>FOLLOW UP REASON</Text>
+                        <Text style={{ fontFamily: 'Poppins-Regular',color:'grey'  }}>FOLLOW UP REASON</Text>
                         <Text style={{ color: '#111563', fontFamily: 'Poppins-Bold' }}>NULL</Text>
                         <View style={{ height: 0.5, width: width - 40, backgroundColor: 'lightgrey', marginVertical: 5 }} />
                     </View>
@@ -223,7 +221,8 @@ const Fpcalls = ({ navigation }) => {
                             <View style={{ marginHorizontal: 20, marginVertical: 15 }}>
                                 <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
                                     <Text style={{ fontFamily: 'Poppins-Bold', color: '#111563' }}>Follow up Details</Text>
-                                    <Pressable style={{ backgroundColor: '#fcb103', borderRadius: 5, justifyContent: 'center' }} onPress={() => setModalVisible(true)}>
+                                    <Pressable style={{ backgroundColor: '#fcb103', borderRadius: 5, justifyContent: 'center' }}
+                                     onPress={() => setModalVisible(true)}>
                                         <Arrow name='plus' size={22} style={{ padding: 2 }} color={'white'} />
                                     </Pressable>
                                 </View>
@@ -234,7 +233,7 @@ const Fpcalls = ({ navigation }) => {
                                         <View style={{ width: 6, height: 6, backgroundColor: '#fcb103', borderRadius: 100, marginRight: 10 }} />
                                         <View>
                                             <Text style={{ fontFamily: 'Poppins-Bold', color: '#111563', fontSize: 14 }}>1st Date</Text>
-                                            <Text style={{ fontFamily: 'Poppins-Regular', fontSize: 11 }}>March 10,2022</Text>
+                                            <Text style={{ fontFamily: 'Poppins-Regular', fontSize: 11,color:'grey'  }}>March 10,2022</Text>
                                             <View style={{ backgroundColor: 'lightgrey', height: 1, width: width - 100, marginVertical: 3 }} />
                                         </View>
                                     </View>
@@ -243,7 +242,7 @@ const Fpcalls = ({ navigation }) => {
                                         <View style={{ width: 6, height: 6, backgroundColor: '#fcb103', borderRadius: 100, marginRight: 10 }} />
                                         <View>
                                             <Text style={{ fontFamily: 'Poppins-Bold', color: '#111563', fontSize: 14 }}>2nd Date</Text>
-                                            <Text style={{ fontFamily: 'Poppins-Regular', fontSize: 11 }}>March 10,2022</Text>
+                                            <Text style={{ fontFamily: 'Poppins-Regular', fontSize: 11,color:'grey'  }}>March 10,2022</Text>
                                             <View style={{ backgroundColor: 'lightgrey', height: 1, width: width - 100, marginVertical: 3 }} />
                                         </View>
                                     </View>
@@ -252,7 +251,7 @@ const Fpcalls = ({ navigation }) => {
                                         <View style={{ width: 6, height: 6, backgroundColor: '#fcb103', borderRadius: 100, marginRight: 10 }} />
                                         <View>
                                             <Text style={{ fontFamily: 'Poppins-Bold', color: '#111563', fontSize: 14 }}>3rd Date</Text>
-                                            <Text style={{ fontFamily: 'Poppins-Regular', fontSize: 11 }}>March 10,2022</Text>
+                                            <Text style={{ fontFamily: 'Poppins-Regular', fontSize: 11,color:'grey'  }}>March 10,2022</Text>
                                             <View style={{ backgroundColor: 'lightgrey', height: 1, width: width - 100, marginVertical: 3 }} />
                                         </View>
                                     </View>

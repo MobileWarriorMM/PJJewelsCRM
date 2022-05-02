@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Dimensions, StyleSheet, Image, TextInput, StatusBar, Pressable } from 'react-native';
+import { View, Text, Dimensions, StyleSheet, Image, TextInput, StatusBar, Pressable,KeyboardAvoidingView} from 'react-native';
 import Lock from 'react-native-vector-icons/EvilIcons';
 import Person from 'react-native-vector-icons/Feather';
 import CheckBox from '@react-native-community/checkbox';
@@ -14,7 +14,7 @@ const Login = ({ navigation }) => {
   const [toggleCheckBox, setToggleCheckBox] = useState(false)
 
   return (
-    <View style={login.mainContainer}>
+    <KeyboardAvoidingView style={login.mainContainer}>
       <StatusBar translucent backgroundColor='transparent' />
       <Image source={require('./assets/images/Layer.png')} style={{ height: height * 0.18, width: width - 195 }} />
       <View style={login.subcontainer}>
@@ -91,7 +91,7 @@ const Login = ({ navigation }) => {
             <Text style={{ textDecorationLine: 'underline', color: 'blue',fontFamily:'Poppins-Regular' }}>Register Here</Text></Pressable>
         </View>
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 const { width, height } = Dimensions.get('window');
