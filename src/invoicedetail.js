@@ -26,6 +26,7 @@ const InvoiceDetail = ({ navigation }) => {
       statusBarTranslucent={true}
         
       >
+        {/* #l;km,cl */}
         <View style={invoice.centeredView}>
           <View style={invoice.modalView}>
           <View style={{ marginTop: 10 }}>
